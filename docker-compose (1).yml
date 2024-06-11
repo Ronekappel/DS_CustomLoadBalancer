@@ -1,0 +1,51 @@
+version: '3'
+
+services:
+  web_server:
+    build: ./web_server
+   
+      
+    environment:
+      - NODE_ENV=production
+    deploy:
+      replicas: 3
+    volumes:
+       - /var/run/docker.sock:/var/run/docker.sock
+    labels:
+      maintainer: "Derick Omuga <derick.omuga@strathmore.edu>"
+ 
+  
+
+  load_balancer:
+    build: ./load_balancer
+    ports:
+      - "5000:5000"
+   
+      
+    environment:
+      - NODE_ENV=production
+    deploy:
+      replicas: 1
+    privileged: true
+    volumes:
+       - /var/run/docker.sock:/var/run/docker.sock
+    labels:
+      maintainer: "Derick Omuga <derick.omuga@strathmore.edu>"   
+  web_client:
+    build: ./web_client
+   
+      
+    environment:
+      - NODE_ENV=production
+    deploy:
+      replicas: 5
+    volumes:
+       - /var/run/docker.sock:/var/run/docker.sock
+       - ./web_client:/app
+    labels:
+      maintainer: "Derick Omuga <derick.omuga@strathmore.edu>"
+   
+  
+    command:  python3 ./client.py
+  
+
