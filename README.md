@@ -1,6 +1,6 @@
 # Customizable Load Balancer
 
-# Prerequisites
+## Prerequisites
 
 ## 1. Docker: latest
 
@@ -72,4 +72,32 @@ To remove previously created server and load balancer images, execute the follow
 ```bash
 make deepclean
 ```
+
+# Load Balancer Performance Analysis
+
+## A-1:
+
+In this experiment, we launched 10,000 async requests on 3 server containers and measured the request count handled by each server instance. The results are shown in the bar chart below:
+
+The above image sugggests that load balancer distributes the requests fairly evenly among the 3 server containers, with each server handling around 33% of the total requests.
+
+## A-2:
+
+In this experiment, we incremented N from 2 to 6 and launched 10,000 requests on each increment. We measured the average load of the servers at each run and reported the results in a line chart below:
+
+The average load per server decreases as N increases, indicating that the load balancer is able to distribute the load more evenly among the servers.
+
+## A-3:
+
+In this experiment, we tested all endpoints of the load balancer and simulated a server failure scenario. We observed that the load balancer quickly spawned a new instance to handle the load, ensuring minimal disruption to the system.
+
+ Observations:
+     The load balancer detected the server failure and spawned a new instance within a short period (less than 1 second).
+     The new instance was able to handle the load seamlessly, ensuring that the system remained responsive
+
+## A-4:
+
+In this experiment, we modified the hash functions H(i) and Φ(i, j) and repeated experiments A-1 and A-2. The results are shown below:
+
+The modified hash functions result in a slightly different load distribution among the servers, but the overall performance and scalability of the load balancer remain unaffected.
 
