@@ -79,7 +79,7 @@ make deepclean
 
 In this experiment, we launched 10,000 async requests on 3 server containers and measured the request count handled by each server instance. The results are shown in the bar chart below:
 
-![pic1](https://github.com/ct-phil/DS_CustomLoadBalancer/assets/101468151/4d22d5e9-20b5-4b65-8d15-e4859e8335db)
+<img src="https://github.com/ct-phil/DS_CustomLoadBalancer/assets/101468151/4d22d5e9-20b5-4b65-8d15-e4859e8335db" alt="pic1" width="300"/>
 
 The above image sugggests that load balancer distributes the requests fairly evenly among the 3 server containers, with each server handling around 33% of the total requests.
 
