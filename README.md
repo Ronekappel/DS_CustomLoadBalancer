@@ -79,11 +79,15 @@ make deepclean
 
 In this experiment, we launched 10,000 async requests on 3 server containers and measured the request count handled by each server instance. The results are shown in the bar chart below:
 
+![pic1](https://github.com/ct-phil/DS_CustomLoadBalancer/assets/101468151/4d22d5e9-20b5-4b65-8d15-e4859e8335db)
+
 The above image sugggests that load balancer distributes the requests fairly evenly among the 3 server containers, with each server handling around 33% of the total requests.
 
 ## A-2:
 
 In this experiment, we incremented N from 2 to 6 and launched 10,000 requests on each increment. We measured the average load of the servers at each run and reported the results in a line chart below:
+
+![pic2](https://github.com/ct-phil/DS_CustomLoadBalancer/assets/101468151/e7506701-be0b-47c0-95d4-030a5f1a7d73)
 
 The average load per server decreases as N increases, indicating that the load balancer is able to distribute the load more evenly among the servers.
 
@@ -99,5 +103,22 @@ In this experiment, we tested all endpoints of the load balancer and simulated a
 
 In this experiment, we modified the hash functions H(i) and Φ(i, j) and repeated experiments A-1 and A-2. The results are shown below:
 
+### Experiment A-1 Modified Hash Functions Load Distribution Bar Chart:
+
+![pic3](https://github.com/ct-phil/DS_CustomLoadBalancer/assets/101468151/2a4ade52-d298-4bac-9ca8-5a2070fcd38a)
+
+### Experiment A-1 Modified Hash Functions Scalability Line Chart:
+
+![pic4](https://github.com/ct-phil/DS_CustomLoadBalancer/assets/101468151/58cf73e4-6490-480b-8b9a-d63d53fd1606)
+
 The modified hash functions result in a slightly different load distribution among the servers, but the overall performance and scalability of the load balancer remain unaffected.
+
+
+# Group Details
+95092 Omuga Derick Maxwel
+145767 James Maikara Kaunda 
+145623 Raynor Munene Mwenda 
+140395 Shifwoko Phil Ogutu
+
+
 
