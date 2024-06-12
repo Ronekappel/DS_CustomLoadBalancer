@@ -80,7 +80,7 @@ make deepclean
 In this experiment, we launched 10,000 async requests on 3 server containers and measured the request count handled by each server instance. The results are shown in the bar chart below:
 
 <div align="center">
-  <img src="https://github.com/ct-phil/DS_CustomLoadBalancer/assets/101468151/4d22d5e9-20b5-4b65-8d15-e4859e8335db" alt="pic1" width="500" height="500"/>
+  <img src="https://github.com/ct-phil/DS_CustomLoadBalancer/assets/101468151/4d22d5e9-20b5-4b65-8d15-e4859e8335db" alt="pic1" width="500" height="400"/>
 </div>
 
 The above image sugggests that load balancer distributes the requests fairly evenly among the 3 server containers, with each server handling around 33% of the total requests.
@@ -89,7 +89,9 @@ The above image sugggests that load balancer distributes the requests fairly eve
 
 In this experiment, we incremented N from 2 to 6 and launched 10,000 requests on each increment. We measured the average load of the servers at each run and reported the results in a line chart below:
 
-![pic2](https://github.com/ct-phil/DS_CustomLoadBalancer/assets/101468151/e7506701-be0b-47c0-95d4-030a5f1a7d73)
+<div align="center">
+  <img src="https://github.com/ct-phil/DS_CustomLoadBalancer/assets/101468151/e7506701-be0b-47c0-95d4-030a5f1a7d73" alt="pic2" width="500" height="400"/>
+</div>
 
 The average load per server decreases as N increases, indicating that the load balancer is able to distribute the load more evenly among the servers.
 
@@ -107,20 +109,24 @@ In this experiment, we modified the hash functions H(i) and Φ(i, j) and repeate
 
 ### Experiment A-1 Modified Hash Functions Load Distribution Bar Chart:
 
-![pic3](https://github.com/ct-phil/DS_CustomLoadBalancer/assets/101468151/2a4ade52-d298-4bac-9ca8-5a2070fcd38a)
+<div align="center">
+  <img src="https://github.com/ct-phil/DS_CustomLoadBalancer/assets/101468151/2a4ade52-d298-4bac-9ca8-5a2070fcd38a" alt="pic3" width="500" height="400"/>
+</div>
 
 ### Experiment A-1 Modified Hash Functions Scalability Line Chart:
 
-![pic4](https://github.com/ct-phil/DS_CustomLoadBalancer/assets/101468151/58cf73e4-6490-480b-8b9a-d63d53fd1606)
+<div align="center">
+  <img src="https://github.com/ct-phil/DS_CustomLoadBalancer/assets/101468151/58cf73e4-6490-480b-8b9a-d63d53fd1606" alt="pic4" width="500" height="400"/>
+</div>
 
 The modified hash functions result in a slightly different load distribution among the servers, but the overall performance and scalability of the load balancer remain unaffected.
 
 
 # Group Details
-95092 Omuga Derick Maxwel
-145767 James Maikara Kaunda 
-145623 Raynor Munene Mwenda 
-140395 Shifwoko Phil Ogutu
+1. 95092 Omuga Derick Maxwel  
+2. 145767 James Maikara Kaunda  
+3. 145623 Raynor Munene Mwenda   
+4. 140395 Shifwoko Phil Ogutu  
 
 
 
